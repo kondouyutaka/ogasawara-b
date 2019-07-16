@@ -33,3 +33,24 @@ input#submit_button {
       height:50px;
       font-size:1.5em;
 }
+.parent{
+  position: relative;
+  height: 80px;
+}
+.children{
+  position: absolute;
+  bottom:0;
+}
+.ryori{
+  background-color: aqua;
+}
+.ryourigazou{
+  background-color: aqua;
+
+}
+.zyouhou{
+  background-color: aqua;
+}
+.tukurikata{
+  background-color: aqua;
+}
