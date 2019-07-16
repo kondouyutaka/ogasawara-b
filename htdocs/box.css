@@ -9,63 +9,12 @@ h1 {
   border-top: 12px solid hsl(202, 82%, 53%);    /* 上側の1本線 */
 }
 
-div {
-  border: solid 5px black;
-  box-sizing: border-box;
-  text-align: center;
-  line-height: 100px;
-  font-weight: bold;
-  font-size:30px;
+
+.parent{
+  position: relative;
+  height: 80px;
 }
-
-.box1 h3{
-  background: #0094D6;
-  color: #FFF;
-  text-align: center;
-  margin: 0;
-  border-radius: 0 0 5px 0;
-  padding: .3em;;
+.children{
+  position: absolute;
+  bottom:0;
 }
-
-.box1 .inner{
-  padding: .5em;
-
-}
-
-.box2,.box3 h5{
-  background: #0094D6;
-  color: #FFF;
-  text-align: center;
-  margin: 0;
-  float: left;
-  border-color: black; 
-  width: 50%;
-  height: 50%;
-}
-
-
-.box2 .box3 .inner2{
-  padding: .5em;
-}
-
-.box4 h4{
-  background: #0094D6;
-  color: #FFF;
-  margin: 0;
-  text-align: center; 
-}
-
-.box4 .inner4{
-  padding: .5em;
-}
-
-.boxA {
-  border: none;
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
-

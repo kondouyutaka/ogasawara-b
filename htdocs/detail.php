@@ -5,10 +5,10 @@
 <?php
 //データベース接続設定
 $dbServer = '127.0.0.1';
-$dbName = 'ogasawarab';
+$dbName = $_SERVER['MYSQL_DB'];
 $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
-$dbUser = 'test';
-$dbPass = 'pass';
+$dbUser = $_SERVER['MYSQL_USER'];
+$dbPass = $_SERVER['MYSQL_PASSWORD'];
 
 //データベースへの接続
 $db = new PDO($dsn, $dbUser, $dbPass);
@@ -30,56 +30,53 @@ $tukurikata=$record['recipe'];
 <head>
   <meta charset="UTF-8">
   <title>調理方法表示画面</title>
-  <link rel="stylesheet" href="box.css">
+  <link rel="stylesheet"type="text/css" href="box.css"/>
 </head>
 <body>
 <center><h1>調理方法</h1></center>  
-
-  <div class="box1">
-    <h3>料理名</h3>
-    <div class="inner">
+<h2><center>
     <?php
-    echo $food;
+    echo('<table border="1">');
+    echo('<tr align="center">');
+    echo('<td>'."料理名".'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'.$food.'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'."料理画像".'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'.'<img src="./gazou.php ?id='.$id.';?>">'.'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'."材料・カロリー・栄養バランス".'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo nl2br('<td>'.$zairyou.'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'."カロリー".$calories.'</td>');
+    echo "<br/>";
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'."栄養評価".$eiyou.'</td>');
+    echo "<br/>";
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo('<td>'."作り方".'</td>');
+    echo('</tr>');
+    echo('<tr align="center">');
+    echo nl2br('<td>'.$tukurikata.'</td>');
+    echo('</tr>');
+    echo('</table>');
     ?>
-    </div>
-  </div>
-
-  <div class="box2">
-  <h5>料理画像</h5>
-  <div class="inner2">
-  <img src="./gazou.php ?id=<?php echo $id; ?>">
-  </div>
-  </div>
-
-  <div class="box3">
-    <h5>材料・カロリー・栄養バランス</h5>
-    <div class="inner3">
-  <?php
-   echo $zairyou;
-   echo "<br/>";
-   echo "カロリー".$calories;
-   echo "<br/>";
-   echo "栄養評価".$eiyou;
-   echo "<br/>";
-  ?>
-  </div>
-  </div>
-
-  <div class="box4">
-  <h4>作り方</h4>
-  <div class="inner4">
-  <?php
-   echo $tukurikata;
-  ?>
-  </div>
-</div>
-
-</body>
-</html>
+  
+</center></h2>
 
 
-  <p><center><input type="button" value="トップに戻る" onClick="location.href='./index.html'"></a></center></p>
-  <p><center><input type="button" value="献立提案画面に戻る" onclick=history.back()></a></center></p>
+  <h3><p><center><input type="button" value="トップに戻る" onClick="location.href='./index.html'"></a></center></p></h3>
+  <h3><p><center><input type="button" value="献立提案画面に戻る" onclick=history.back()></a></center></p></h3>
 
 </body>
 
