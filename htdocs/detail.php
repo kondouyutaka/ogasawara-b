@@ -30,7 +30,7 @@ $tukurikata=$record['recipe'];
 <head>
   <meta charset="UTF-8">
   <title>調理方法表示画面</title>
-  <link rel="stylesheet"type="text/css" href="box.css"/>
+  <link rel="stylesheet"type="text/css" href="style.css"/>
 </head>
 <body>
 <center><h1>調理方法</h1></center>  
