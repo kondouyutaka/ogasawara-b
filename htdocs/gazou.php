@@ -1,5 +1,5 @@
 <?php
- $id = $_GET['id']
+ $id = $_GET['id'];
  ?>
 <?php
 //データベース接続設定
@@ -14,8 +14,9 @@ $db = new PDO($dsn, $dbUser, $dbPass);
 
 
 header("Content-type: image/jpg");
-$stmt = $db->query("select * from maindb WHERE cookingID ='$id'");
+$stmt = $db->query("select * from maindb WHERE cookingID = '$id' ");
 $record = $stmt->fetch();
-$gazou = $record['image'];
+$gazou=$record['image']; 
 echo $gazou;
+
 ?>
