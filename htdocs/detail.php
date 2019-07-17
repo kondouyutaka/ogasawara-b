@@ -47,7 +47,7 @@ $tukurikata=$record['recipe'];
     echo('<td>'."料理画像".'</td>');
     echo('</tr>');
     echo('<tr align="center">');
-    echo('<td>'.'<img src="./gazou.php?id='.$id.'" height="20%">'.'</td>');
+    echo('<td>'.'<img src="./gazou.php?id='.$id.'" width="20%" height="20%">'.'</td>');
     echo('</tr>');
     echo('<tr bgcolor="aqua" align="center">');
     echo('<td>'."材料・カロリー・栄養バランス".'</td>');
